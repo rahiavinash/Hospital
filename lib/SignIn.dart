@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Utils/Toast/toast.dart';
+
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
 
@@ -92,6 +94,9 @@ class _SignInState extends State<SignIn> {
                       }, child: Text("Sign Up",style: TextStyle(decoration: TextDecoration.underline,
                           fontSize: 15,color: Colors.black),)),
                       TextButton(onPressed: (){
+                        Toast.flushbarError("Forget Password", context);
+                        Toast.toastMessage("Forget password");
+
                         //     Navigator.pushNamed(context, "forgetPassword");
                       }, child: Text("Forgot Password",style: TextStyle(decoration: TextDecoration.underline,
                           fontSize: 15,color: Colors.black),))
