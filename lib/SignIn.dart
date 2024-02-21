@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'Utils/Toast/toast.dart';
+
+
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -15,13 +16,11 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     return Container(
 
-      decoration: BoxDecoration
+      decoration: const BoxDecoration
         (
         gradient: LinearGradient(
           colors: [
-           Color(0xfff9d423),Color(0xff96fbc4),
-          ],
-
+           Color(0xfff9d423),Color(0xff96fbc4),],
         )
        //   image: DecorationImage( image: AssetImage('Assest/register.png') ,fit: BoxFit.cover)
       ),
@@ -29,19 +28,17 @@ class _SignInState extends State<SignIn> {
         backgroundColor: Colors.transparent,
         body: Stack(children: [
           Container(
-
-            padding: EdgeInsets.only(left: 45,top: 120),
-            child: Text("Sai Krupa Hospital",style: TextStyle(color: Color(0xff000000)
+            padding: const EdgeInsets.only(left: 45,top: 120),
+            child: const Text("Sai Krupa Hospital",style: TextStyle(color: Color(0xff000000)
                 ,fontSize: 35,),
             ),
-
           ),
           SingleChildScrollView(
             child: Container(
               padding: EdgeInsets.only(top: MediaQuery.of(context).size.height*0.45,left: 30,right: 30),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 0,
                   ),
                   TextField(
@@ -54,7 +51,7 @@ class _SignInState extends State<SignIn> {
                         contentPadding: EdgeInsets.all(15) //for inside padding size
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   TextField(
@@ -69,20 +66,20 @@ class _SignInState extends State<SignIn> {
                         contentPadding: EdgeInsets.all(15)
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 30,),
            TextButton(onPressed: (){
 
            }, child: Text("Sign In"),
 
-               style: TextButton.styleFrom(textStyle: TextStyle(fontFamily:AutofillHints.birthday,color: Color(0xff000000) )
-                   ,padding: EdgeInsets.only(left: 80,right: 80,top: 20,bottom: 20),
-                   backgroundColor: Color(0xfff9d423),shape: BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5)))
+               style: TextButton.styleFrom(textStyle: const TextStyle(fontFamily:AutofillHints.birthday,color: Color(0xff000000) )
+                   ,padding: const EdgeInsets.only(left: 80,right: 80,top: 20,bottom: 20),
+                   backgroundColor: const Color(0xfff9d423),shape: const BeveledRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(5)))
                )
 
            ),
            
            //   children: [Text("SignIn ",style: TextStyle(fontSize: 27,fontWeight: FontWeight.w700),)
-                  SizedBox(
+                  const SizedBox(
                     height: 30,
                   ),
                   Row(
@@ -91,14 +88,13 @@ class _SignInState extends State<SignIn> {
                       TextButton(onPressed: (){
                         //navigation
                         Navigator.pushNamed(context, "Register");
-                      }, child: Text("Sign Up",style: TextStyle(decoration: TextDecoration.underline,
+                      }, child: const Text("Sign Up",style: TextStyle(decoration: TextDecoration.underline,
                           fontSize: 15,color: Colors.black),)),
                       TextButton(onPressed: (){
                         Toast.flushbarError("Forget Password", context);
                         Toast.toastMessage("Forget password");
-
                         //     Navigator.pushNamed(context, "forgetPassword");
-                      }, child: Text("Forgot Password",style: TextStyle(decoration: TextDecoration.underline,
+                      }, child: const Text("Forgot Password",style: TextStyle(decoration: TextDecoration.underline,
                           fontSize: 15,color: Colors.black),))
 
                     ],
